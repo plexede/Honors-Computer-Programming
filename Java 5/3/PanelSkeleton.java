@@ -2,23 +2,19 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Scanner;
 
-public class PanelSkeleton extends JPanel
-{
-    public void paintComponent(Graphics g)
-    {
-        Scanner scanner = new Scanner(System.in);
+public class PanelSkeleton extends JPanel {
+    public void paintComponent(Graphics g) {
+        Scanner s = new Scanner(System.in);
+        g.setColor(Color.black);
+        g.drawString("make ur own shape yay", 0, 0);
         System.out.print("Define x: ");
-        int x = scanner.nextInt();
+        int x = s.nextInt();
         System.out.print("Define y: ");
-        int y = scanner.nextInt();
-        System.out.print("Define z: ");
-        int z = scanner.nextInt();
+        int y = s.nextInt();
         System.out.print("Define width: ");
-        int width = scanner.nextInt();
+        int width = s.nextInt();
         System.out.print("Define height: ");
-        int height = scanner.nextInt();
-        // Code goes here!!
-        g.setColor(Color.BLUE);
-        g.drawRect(10, 20, 100, 50);
+        int height = s.nextInt();
+        g.fillOval(x, y, width, height);
     }
 }

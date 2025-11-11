@@ -5,7 +5,7 @@ public class PanelSkeletonDriver_2 {
     public static void main(String[] args)
     {
         JFrame myFrame = new JFrame();
-        myFrame.setContentPane(new PanelSkeleton_3());
+        myFrame.setContentPane(new PanelSkeleton_2());
         myFrame.setVisible(true);
         myFrame.setSize(500, 500);
     }

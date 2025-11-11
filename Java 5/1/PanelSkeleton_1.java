@@ -13,8 +13,8 @@ public class PanelSkeleton_1 extends JPanel
         g.setColor(Color.black);
         g.fillOval(center + 40, center + 50, 20, 30);
         g.fillOval(center + 120, center + 50, 20, 30);
-        g.setColor(Color.brown);
-        g.fillOval();
+        // g.setColor(Color.brown);
+        // g.fillOval();
         
     }
 }

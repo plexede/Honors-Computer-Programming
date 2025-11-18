@@ -1,5 +1,6 @@
-import javax.swing.*;
 import java.awt.*;
+import java.util.Random;
+import javax.swing.*;
 
 public class PanelSkeleton_2 extends JPanel
 {
@@ -10,8 +11,13 @@ public class PanelSkeleton_2 extends JPanel
     public void paintComponent(Graphics g)
     {
         // Code goes here!!
+        Random r = new Random();
+        int x = r.nextInt(300);
+        int y = r.nextInt(300);
+        int width = r.nextInt(100, 200);
+        int height = r.nextInt(100, 200);
         g.setColor(Color.BLUE);
-        g.drawRect(10, 20, 100, 50);
+        g.fillRect(x, y, width, height);
     }
     // public static void generateShape() {
 

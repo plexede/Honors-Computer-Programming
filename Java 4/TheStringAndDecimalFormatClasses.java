@@ -1,5 +1,5 @@
-import java.util.Scanner;
 import java.text.DecimalFormat;
+import java.util.Scanner;
 
 public class TheStringAndDecimalFormatClasses {
     static Scanner s = new Scanner(System.in);
@@ -16,17 +16,17 @@ public class TheStringAndDecimalFormatClasses {
         System.out.println(userInput.toUpperCase());
         System.out.println(userInput.toLowerCase());
 
-        System.out.println("vielen danke. dein string ist" + userInput.length() +
-        "characters.");
-        System.out.println("das vierte character ist" + userInput.charAt(4));
-        System.out.println("das vierte character ist" + userInput.charAt(4));
+        System.out.println("vielen danke. dein string ist " + userInput.length() +
+        " characters.");
+        System.out.println("das vierte character ist " + userInput.charAt(4));
+        System.out.println("das vierte character ist " + userInput.charAt(4));
         System.out.println("characters eins bis sechs: " + userInput.substring(1,
         6));
         }
         { // 2.1
         System.out.println("yet another string: ");
         userInput = s.nextLine();
-        userInput = replace(userInput, 'e', 's');
+        userInput = userInput.replace('e', 's');
         System.out.println(userInput);
         }
         { // 2.2
@@ -46,11 +46,11 @@ public class TheStringAndDecimalFormatClasses {
         { // 3.1
         System.out.println("more strings please: ");
         userInput = s.nextLine();
-        int randomIndex = (int)(Math.round(Math.random() * userInput.length()));
+        int randomIndex = (int)(Math.random() * userInput.length());
         System.out.println("Character at random index " + randomIndex + ": " +
         userInput.charAt(randomIndex));
-        System.out.println("substring from 0 to random index of " + randomIndex + ":
-        " + userInput.substring(0, randomIndex));
+        System.out.println("substring from 0 to random index of " + randomIndex + ": " +
+        userInput.substring(0, randomIndex));
         }
         { // 3.3
         System.out.println("enter red blue or yellow: ");
@@ -74,11 +74,14 @@ public class TheStringAndDecimalFormatClasses {
         }
         { // 4.2
         DecimalFormat fmt = new DecimalFormat("0.###");
-        userInput = s.nextInt();
-        int userInput2 = s.nextInt();
-        double result = (double)userInput / (double)userInput2;
+        System.out.println("enter numerator (int): ");
+        int numerator = s.nextInt();
+        System.out.println("enter denominator (int): ");
+        int denominator = s.nextInt();
+        double result = (double)numerator / (double)denominator;
         System.out.println("result formatted to 3 decimal places: " +
         fmt.format(result));
+        s.nextLine(); // consume leftover newline
         }
         { // 4.3 find power, assuming p = jt
             DecimalFormat fmt = new DecimalFormat("0.##");

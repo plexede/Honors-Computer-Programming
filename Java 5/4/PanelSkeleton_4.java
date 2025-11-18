@@ -7,6 +7,6 @@ public class PanelSkeleton_4 extends JPanel
     {
         // Code goes here!!
         g.setColor(Color.BLUE);
-        g.drawRect(10, 20, 100, 50);
+        g.fillArc(250, 250, 100, 200, (int)(Math.random() * 360), (int)(Math.random() * 360));
     }
 }

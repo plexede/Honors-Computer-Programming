@@ -18,7 +18,7 @@ public class oneAndTwo {
     }
     static public void partTwo(int userInput) {
         Random r = new Random();
-        if (userInput == r.nextInt(1, 5)) {
+        if (userInput == r.nextInt(1, 6)) {
             System.out.println("And you guessed the magic number!");
         } else {
             System.out.println("Sorry, your guess doesn't match the magic number.");

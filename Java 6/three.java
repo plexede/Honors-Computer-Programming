@@ -1,4 +1,3 @@
-
 import java.util.Random;
 import java.util.Scanner;
 
@@ -16,10 +15,11 @@ public class three {
                 } while (!(userInput.contentEquals("true") || userInput.contentEquals("false")));
                 if (userInput.contentEquals("true")) {
                     System.out
-                            .println("False! The Earth orbits its own axis, all the while it instead orbits the Sun.");
+                            .println(
+                                    "False! The Earth revolves its own axis, all the while it instead orbits the Sun.");
                 } else {
                     System.out.println(
-                            "You're right! The Earth orbits its own axis, all the while it instead orbits the Sun.");
+                            "You're right! The Earth revolves its own axis, all the while it instead orbits the Sun.");
                 }
             case 2:
                 do {
@@ -28,10 +28,9 @@ public class three {
                 } while (!(userInput.contentEquals("true") || userInput.contentEquals("false")));
                 if (userInput.contentEquals("true")) {
                     System.out
-                            .println("False! The Earth orbits its own axis, all the while it instead orbits the Sun.");
+                            .println("the answer");
                 } else {
-                    System.out.println(
-                            "You're right! The Earth orbits its own axis, all the while it instead orbits the Sun.");
+                    System.out.println("the answer");
                 }
             case 3:
                 do {
@@ -61,3 +60,4 @@ public class three {
         s.close();
     }
 }
+wwwww

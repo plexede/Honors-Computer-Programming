@@ -60,4 +60,3 @@ public class three {
         s.close();
     }
 }
-wwwww

@@ -12,8 +12,8 @@ public class three {
                 do {
                     System.out.println("True or false: The Earth revolves around the Sun.");
                     userInput = s.nextLine();
-                } while (!(userInput.contentEquals("true") || userInput.contentEquals("false")));
-                if (userInput.contentEquals("true")) {
+                } while (!(userInput.equalsIgnoreCase("true") || userInput.equalsIgnoreCase("false")));
+                if (userInput.equalsIgnoreCase("true")) {
                     System.out
                             .println(
                                     "False! The Earth revolves its own axis, all the while it instead orbits the Sun.");
@@ -23,12 +23,12 @@ public class three {
                 }
             case 2:
                 do {
-                    System.out.println("please make these unique later");
+                    System.out.println("True or False: A person playing Minecraft on a phone or tablet can join somebody playing on a console, like PlayStation or XBox.");
                     userInput = s.nextLine();
-                } while (!(userInput.contentEquals("true") || userInput.contentEquals("false")));
-                if (userInput.contentEquals("true")) {
+                } while (!(userInput.equalsIgnoreCase("true") || userInput.equalsIgnoreCase("false")));
+                if (userInput.equalsIgnoreCase("true")) {
                     System.out
-                            .println("the answer");
+                            .println("Yes");
                 } else {
                     System.out.println("the answer");
                 }
@@ -36,8 +36,8 @@ public class three {
                 do {
                     System.out.println("change this too");
                     userInput = s.nextLine();
-                } while (!(userInput.contentEquals("true") || userInput.contentEquals("false")));
-                if (userInput.contentEquals("true")) {
+                } while (!(userInput.equalsIgnoreCase("true") || userInput.equalsIgnoreCase("false")));
+                if (userInput.equalsIgnoreCase("true")) {
                     System.out
                             .println("False! The Earth orbits its own axis, all the while it instead orbits the Sun.");
                 } else {
@@ -48,8 +48,8 @@ public class three {
                 do {
                     System.out.println("change this too");
                     userInput = s.nextLine();
-                } while (!(userInput.contentEquals("true") || userInput.contentEquals("false")));
-                if (userInput.contentEquals("true")) {
+                } while (!(userInput.equalsIgnoreCase("true") || userInput.equalsIgnoreCase("false")));
+                if (userInput.equalsIgnoreCase("true")) {
                     System.out
                             .println("False! The Earth orbits its own axis, all the while it instead orbits the Sun.");
                 } else {

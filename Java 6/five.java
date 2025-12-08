@@ -50,9 +50,25 @@ public class five {
             System.out.print("c = ");
             c = doubleScanner.nextDouble();
 
+            /*
+             * Create a program that will find the roots of a quadratic.
+             * You will take three doubles from the user (a, b, and c). Use the
+             * discriminant to decide if the combination has two real roots, one real
+             * root, or no real roots. If the quadratic has no real roots, you can just
+             * say “No real roots.” If it has one real root, you should just output one
+             * root. If it has two, you should output the two roots.
+             * EXTRA: If you want to get fancy, you can find the imaginary roots.
+             */
+
             // b^2 - 4ac
-            double output = (b*b) - (4*a*c);
+            double output = (b * b) - (4 * a * c);
             System.out.println("The discriminant is: " + output);
+
+            // d > 0 = real non zero number
+
+            // d = 0 = 1 real
+
+            // d < 0 = no real roots
 
             doubleScanner.close();
         }

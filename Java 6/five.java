@@ -12,18 +12,18 @@ public class five {
             userInput = userInput.toUpperCase();
             switch (IsVowel(userInput)) {
                 case 0:
-                    System.out.print("Your character is a consenant.");
+                    System.out.println("Your character is a consenant.");
                     break;
                 case 1:
-                    System.out.print("Your character is a vowel.");
+                    System.out.println("Your character is a vowel.");
                     break;
                 case 2:
-                    System.out.print("Your character is sometimes a vowel.");
+                    System.out.println("Your character is sometimes a vowel.");
                     break;
                 default:
                     break;
             }
-            stringScanner.close();
+            // stringScanner.close();
         }
         {
             Scanner intScanner = new Scanner(System.in);
@@ -31,11 +31,11 @@ public class five {
             System.out.println("Please input an integer:");
             userInput = intScanner.nextInt();
             if (userInput % 2 == 0) {
-                System.out.print("Your integer is even.");
+                System.out.println("Your integer is even.");
             } else {
-                System.out.print("Your integer is odd.");
+                System.out.println("Your integer is odd.");
             }
-            intScanner.close();
+            // intScanner.close();
         }
         {
             Scanner doubleScanner = new Scanner(System.in);
@@ -43,11 +43,11 @@ public class five {
             double b;
             double c;
             System.out.println("Please input a double:");
-            System.out.print("a = ");
+            System.out.println("a = ");
             a = doubleScanner.nextDouble();
-            System.out.print("b = ");
+            System.out.println("b = ");
             b = doubleScanner.nextDouble();
-            System.out.print("c = ");
+            System.out.println("c = ");
             c = doubleScanner.nextDouble();
 
             /*
@@ -70,7 +70,7 @@ public class five {
 
             // d < 0 = no real roots
 
-            doubleScanner.close();
+            // doubleScanner.close();
         }
     }
 

@@ -28,7 +28,11 @@ public class two {
                 }
             }
             if (instances > 0) {
-                System.out.println("There are " + instances + " instances of " + alphabet.charAt(i));
+                if (instances > 1) {
+                    System.out.println("There are " + instances + " instances of " + alphabet.charAt(i));
+                } else {
+                    System.out.println("There is " + instances + " instance of " + alphabet.charAt(i));
+                }
             }
         }
     }

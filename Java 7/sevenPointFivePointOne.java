@@ -14,10 +14,11 @@ public class sevenPointFivePointOne {
         System.out.println("jump:");
         long jump = s.nextLong();
 
-        for (long i = min; i <= max; i++) { // i plus jump
+        for (long i = min; i <= max;) { // i plus jump
             System.out.print(cached + " + " + i + " = ");
             cached = cached + i;
             System.out.println(cached);
+            i = i + jump;
         }
         s.close();
     }

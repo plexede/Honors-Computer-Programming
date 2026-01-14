@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class six {
+public class six_seven {
     public static void main(String[] args) {
         /*
          * Create a program that will play the “High Low Guessing Game”. The
@@ -20,7 +20,20 @@ public class six {
 
         System.out.println("I'm thinking of a number from " + min + " to " + max + ". Can you guess it?");
         int userInput = s.nextInt();
-        r.nextInt(min, max + 1);
+        int computerGuess = r.nextInt(min, max + 1);
+        int overUnder;
+        if (computerGuess == userInput) {
+            overUnder = 0;
+            switch (overUnder) {
+                case 1:
+                    System.out.println("Wrong. The number was: " + computerGuess);
+                    return;
+                    case 0:
+                        System.out.println("You guessed it!");
 
+
+        }
+
+        s.close();
     }
 }

@@ -18,22 +18,42 @@ public class six_seven {
         int min = 1;
         int max = 3;
 
-        System.out.println("I'm thinking of a number from " + min + " to " + max + ". Can you guess it?");
-        int userInput = s.nextInt();
         int computerGuess = r.nextInt(min, max + 1);
-        int overUnder;
-        if (computerGuess == userInput) {
-            overUnder = 0;
-            switch (overUnder) {
-                case 1:
-                    System.out.println("Wrong. The number was: " + computerGuess);
-                    return;
+        int overUnder = 0;
+        int guesses = 0;
+        boolean guessed = false;
+        int userInput;
+
+        System.out.println("I'm thinking of a number from " + min + " to " + max + ". Can you guess it?");
+        do {
+            userInput = s.nextInt();
+            if (userInput > max || userInput < min) {
+                System.out.println("That's not even within bounds. What a waste of a guess.");
+            } else {
+                if (computerGuess == userInput) {
+                    overUnder = 0;
+                } else {
+                    overUnder = (computerGuess > userInput) ? 1 : -1;
+                }
+                switch (overUnder) {
+                    case -1:
+                        System.out.println("Lower!");
+                        break;
                     case 0:
                         System.out.println("You guessed it!");
-
-
-        }
-
+                        guessed = true;
+                        break;
+                    case 1:
+                        System.out.println("Higher!");
+                        break;
+                }
+            }
+            guesses++;
+        } while (!guessed);
+        if (guesses == 1)
+            System.out.println("first try!");
+        else
+            System.out.println("finally. took you " + guesses + " tries...");
         s.close();
     }
 }

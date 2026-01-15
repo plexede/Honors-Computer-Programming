@@ -1,5 +1,8 @@
-public class BuddyDriver {
-    public static void main(String args[]) {
-        System.out.println();
+public class BuddyDriver 
+{
+    public static void main(String args[]) 
+    {
+        Buddy buddy = new Buddy();
+        buddy.wave();
     }
 }

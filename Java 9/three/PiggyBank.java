@@ -2,7 +2,19 @@ import java.text.DecimalFormat;
 
 public class PiggyBank {
     DecimalFormat fmt = new DecimalFormat("0.##");
-    double balance = 0;
+    double balance;
+
+    PiggyBank(int startingBalance) {
+        balance = startingBalance;
+    }
+    PiggyBank() {
+        balance = 0;
+    }
+
+    int addMoney(int amount) {
+        balance += amount;
+        return balance;
+    }
 
     void addPenny() {
         balance += .01;

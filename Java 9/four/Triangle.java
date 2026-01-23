@@ -44,11 +44,11 @@ public class Triangle {
      * HINT: Use the distance formula.
      */
     private double sideLength(double x1, double y1, double x2, double y2) {
+        // sqrt((x2-x1)^2 + (y2-y1)^2)
         double output;
         output = Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2);
         output = Math.sqrt(output);
         return output;
-        // sqrt((x2-x1)^2 + (y2-y1)^2)
     }
 
     // The second method should have the following header:
@@ -65,6 +65,7 @@ public class Triangle {
      * method three times to do this.
      * REMEMBER: You can call a method inside another method with just the name and
      * parentheses.
+     * 
      * Hacker: Do N00b and Coder. Go to the driver. Before you make the Triangle
      * object, make
      * sure the given points actually make a Triangle.

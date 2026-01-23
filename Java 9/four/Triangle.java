@@ -38,13 +38,28 @@ public class Triangle {
 
     /*
      * Coder: Do N00b and add two methods. One with the following header:
-     * public double sideLength(double x1, double y1, double x2, double y2)
      * The method will find the distance between
      * two points, or one side length, and return
      * the answer.
      * HINT: Use the distance formula.
-     * The second method should have the following header:
-     * public double findPerimeter()
+     */
+    private double sideLength(double x1, double y1, double x2, double y2) {
+        double output;
+        output = Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2);
+        output = Math.sqrt(output);
+        return output;
+        // sqrt((x2-x1)^2 + (y2-y1)^2)
+    }
+
+    // The second method should have the following header:
+    public double findPerimeter() {
+        double output = 0;
+        output += sideLength(x1, y1, x2, y2);
+        output += sideLength(x2, y2, x3, y3);
+        output += sideLength(x2, y2, x1, y1);
+        return output;
+    }
+    /*
      * This method will find the perimeter of the Triangle. It should use the
      * sideLength
      * method three times to do this.

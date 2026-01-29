@@ -1,13 +1,24 @@
 public class BankAccount {
     String acctName;
-    double accBalance;
-    String accPIN;
-    BankAccount(String accName, double accBalance, String accPIN) {
-        this.acctName = accName;
-        this.accaccBalance = accBalance;
-        this.accPIN = accPIN;
+    double acctBalance;
+    String acctPIN;
+
+    BankAccount(String acctName, double acctBalance, int acctPIN) {
+        this.acctName = acctName;
+        this.acctBalance = acctBalance;
+        this.acctPIN = acctPIN;
     }
-    public double withdraw(double amount){}
-    public void deposit(double amount){}
-    public String toString(){}
+
+    public double withdraw(double amount) {
+        acctBalance -= amount;
+        return acctBalance;
+    }
+
+    public void deposit(double amount) {
+        acctBalance += amount;
+    }
+
+    public String toString() {
+        return ("Account Holder: " + acctName + "Balance: " + acctBalance);
+    }
 }

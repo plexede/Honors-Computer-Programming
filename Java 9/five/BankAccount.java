@@ -17,8 +17,4 @@ public class BankAccount {
     public void deposit(double amount) {
         acctBalance += amount;
     }
-
-    public String toString() {
-        return ("Account Holder: " + acctName + "Balance: " + acctBalance);
-    }
 }

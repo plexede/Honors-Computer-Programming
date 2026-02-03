@@ -1,7 +1,7 @@
 public class BankAccount {
     String acctName;
     double acctBalance;
-    String acctPIN;
+    int acctPIN;
 
     BankAccount(String acctName, double acctBalance, int acctPIN) {
         this.acctName = acctName;

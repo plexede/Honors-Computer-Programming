@@ -1,33 +1,32 @@
-public class BankUI {
-    BankAccount acctInterface = new BankAccount("HOLDER_NAME", 0, 0000);
+import java.util.Scanner;
 
-    public String acctSummarizedString() {
-        return ("Account Holder: " + acctInterface.acctName + "Balance: " + acctInterface.acctBalance);
+public class BankUI {
+    Scanner s = new Scanner(System.in);
+
+    public String acctSummarizedString(String acctName, double acctBalance) {
+        return ("Account Holder: " + acctName + "Balance: " + acctBalance);
     }
 
     int mainMenu() {
-        System.out.println(acctSummarizedString());
         System.out.println("Welcome. do sum iono\n" +
                 "1. Deposit" +
                 "2. Withdraw" +
                 "3. Check Balance");
-        switch (userInput) {
-            case 1:
-                // deposit
-                break;
-            case 2:
-                // withdraw
-                break;
-            case 3:
-
-            default:
-                break;
-        }
+        return s.nextInt();
     }
 
-    void depositMenu() {
-        String userInput();
+    double depositMenu() {
+        int userChoice;
+        double userInput;
         // how much?
-        acctInterface.deposit(userInput);
+        System.out.println("How much to deposit?");
+        return userInput;
+    }
+    
+    double withdrawMenu() {
+        String userInput;
+        // how much?
+        System.out.println("How much to withdraw?");
+        return deposit(userInput);
     }
 }

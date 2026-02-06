@@ -3,10 +3,11 @@ public class BankAccountDriver {
         BankAccount acctInterface = new BankAccount("HOLDER_NAME", 0, 0000);
         BankUI ui = new BankUI();
         // for (boolean valid = false; !valid;) {
-            int userChoice = ui.mainMenu();
-            // valid = (userChoice > 0) && (userChoice <= NUMBER_OF_OPTIONS);
-            // if (!valid)
-            // System.out.println("Invalid input!");
+        int userChoice = ui.mainMenu();
+        // valid = (userChoice > 0) && (userChoice <= NUMBER_OF_OPTIONS);
+        // if (!valid)
+        // System.out.println("Invalid input!");
+        for (boolean valid = true; !valid;) {
             switch (userChoice) {
                 case 1:
                     // deposit
@@ -23,8 +24,10 @@ public class BankAccountDriver {
                     break;
                 default:
                     System.out.println("Invalid input. Try again.");
+                    valid = false;
                     break;
             }
+        }
         // }
     }
 }

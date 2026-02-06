@@ -9,9 +9,9 @@ public class BankUI {
 
     int mainMenu() {
         System.out.println("Welcome. do sum iono\n" +
-                "1. Deposit" +
-                "2. Withdraw" +
-                "3. Check Balance");
+                "1. Deposit\n" +
+                "2. Withdraw\n" +
+                "3. Check Balance\n");
         return s.nextInt();
     }
 
@@ -22,7 +22,7 @@ public class BankUI {
         System.out.println("How much to deposit?");
         return userInput;
     }
-    
+
     double withdrawMenu() {
         String userInput;
         // how much?

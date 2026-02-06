@@ -12,15 +12,24 @@ public class BankAccountDriver {
                 case 1:
                     // deposit
                     acctInterface.deposit(ui.depositMenu());
-
                     break;
                 case 2:
                     // withdraw
-                    acctInterface.withdraw(ui.withdrawMenu());
+                    double output = acctInterface.withdraw(ui.withdrawMenu(acctInterface.checkHold()));
+                    if (output != -1) {
+                        System.out.println("$" + output + " withdrawn.");
+                    } else {
+                        acctInterface.setHold();
+                    }
                     break;
                 case 3:
                     // check balance
                     System.out.println(ui.acctSummarizedString(acctInterface.acctName, acctInterface.acctBalance));
+                    break;
+                case 4:
+                    // quit
+                    System.out.println("bye");
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Invalid input. Try again.");

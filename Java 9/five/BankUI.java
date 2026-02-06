@@ -11,22 +11,28 @@ public class BankUI {
         System.out.println("Welcome. do sum iono\n" +
                 "1. Deposit\n" +
                 "2. Withdraw\n" +
-                "3. Check Balance\n");
+                "3. Check Balance\n" +
+                "4. Quit");
         return s.nextInt();
     }
 
     double depositMenu() {
-        int userChoice;
+        System.out.println("How much to deposit?");
         double userInput;
         // how much?
-        System.out.println("How much to deposit?");
+        userInput = s.nextDouble();
         return userInput;
     }
 
-    double withdrawMenu() {
+    double withdrawMenu(boolean hold) {
         String userInput;
         // how much?
-        System.out.println("How much to withdraw?");
-        return deposit(userInput);
+        if (!hold) {
+            System.out.println("How much to withdraw?");
+            return userInput;
+        } else {
+            System.out.println("Account on hold. Cannot withdraw.");
+            return 0;
+        }
     }
 }

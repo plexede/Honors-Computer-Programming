@@ -3,6 +3,9 @@ public class BankAccountDriver {
         BankAccount acctInterface = new BankAccount("HOLDER_NAME", 0, 0000);
         BankUI ui = new BankUI();
         // for (boolean valid = false; !valid;) {
+        while (!acctInterface.verify()){
+            ui.loginMenu(acctInterface.getAttempts(), acctInterface.checkHold());
+        }
         int userChoice = ui.mainMenu();
         // valid = (userChoice > 0) && (userChoice <= NUMBER_OF_OPTIONS);
         // if (!valid)
@@ -24,7 +27,7 @@ public class BankAccountDriver {
                     break;
                 case 3:
                     // check balance
-                    System.out.println(ui.acctSummarizedString(acctInterface.acctName, acctInterface.acctBalance));
+                    System.out.println(ui.acctSummarizedString(acctInterface.acctName, acctInterface.getBalance()));
                     break;
                 case 4:
                     // quit

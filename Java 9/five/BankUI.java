@@ -7,6 +7,15 @@ public class BankUI {
         return ("Account Holder: " + acctName + "Balance: " + acctBalance);
     }
 
+    public int loginMenu(int attempts, boolean hold) {
+        if (hold)
+            System.out.println("Account on hold. Please contact your bank.");
+        else if (attempts > 0)
+            System.out.println("Invalid PIN. Please try again.");
+        System.out.println("Enter Security PIN:");
+        return s.nextInt();
+    }
+
     int mainMenu() {
         System.out.println("Welcome. do sum iono\n" +
                 "1. Deposit\n" +
@@ -35,4 +44,5 @@ public class BankUI {
             return 0;
         }
     }
+
 }

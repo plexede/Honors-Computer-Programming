@@ -11,6 +11,9 @@ public class BankAccount {
         this.acctName = acctName;
         this.acctBalance = acctBalance;
         this.acctPIN = acctPIN;
+
+        if (acctPIN == 0)
+            throw new IllegalArgumentException("PIN cannot be 0");
     }
 
     public boolean verify(int userInput) {
@@ -25,6 +28,7 @@ public class BankAccount {
             attempts++;
         return verified;
     }
+
     public int getAttempts() {
         return attempts;
     }
@@ -32,6 +36,7 @@ public class BankAccount {
     public boolean verify() {
         return verified;
     }
+
     public void logout() {
         verified = false;
         attempts = 0;
@@ -56,7 +61,7 @@ public class BankAccount {
             return -1;
         } else {
             acctBalance -= amount;
-            return acctBalance;
+            return amount;
         }
     }
 

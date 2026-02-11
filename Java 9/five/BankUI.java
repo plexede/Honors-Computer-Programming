@@ -4,7 +4,7 @@ public class BankUI {
     Scanner s = new Scanner(System.in);
 
     public String acctSummarizedString(String acctName, double acctBalance) {
-        return ("Account Holder: " + acctName + "Balance: " + acctBalance);
+        return ("Account Holder: " + acctName + " Account Balance: " + acctBalance);
     }
 
     public int loginMenu(int attempts, boolean hold) {
@@ -21,7 +21,8 @@ public class BankUI {
                 "1. Deposit\n" +
                 "2. Withdraw\n" +
                 "3. Check Balance\n" +
-                "4. Quit");
+                "4. Logout\n" +
+                "5. Quit");
         return s.nextInt();
     }
 
@@ -51,7 +52,7 @@ public class BankUI {
     }
 
     public void presentError() {
-        System.out.println("Operation cancelled: An error occurred. Please try again.")
+        System.out.println("Operation cancelled: An error occurred. Please try again.");
     }
 
     public void logout() {

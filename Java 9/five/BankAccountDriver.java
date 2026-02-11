@@ -1,6 +1,6 @@
 public class BankAccountDriver {
     public static void main(String[] args) {
-        BankAccount acctInterface = new BankAccount("HOLDER_NAME", 0, 0000);
+        BankAccount acctInterface = new BankAccount("HOLDER_NAME", 0, 123);
         BankUI ui = new BankUI();
         // for (boolean valid = false; !valid;) {
         while (true) {
@@ -21,7 +21,7 @@ public class BankAccountDriver {
                         // withdraw
                         double requestedQuantity = acctInterface.withdraw(ui.withdrawMenu(acctInterface.checkHold()));
 
-                        if (requestedQuantity > acctInterface.getBalance()) {
+                        if (requestedQuantity > acctInterface.getBalance() || requestedQuantity < 0) {
                             acctInterface.setHold();
                             ui.presentError();
                         } else {
@@ -39,7 +39,7 @@ public class BankAccountDriver {
                         break;
                     case 5:
                         // quit
-                        System.out.println("bye");
+                        System.out.println("bye"); // dont care enough
                         System.exit(0);
                         break;
                     default:

@@ -34,15 +34,28 @@ public class BankUI {
     }
 
     double withdrawMenu(boolean hold) {
-        String userInput;
+        // String userInput;
         // how much?
         if (!hold) {
             System.out.println("How much to withdraw?");
-            return userInput;
+            // return userInput;
+            return s.nextDouble();
         } else {
             System.out.println("Account on hold. Cannot withdraw.");
             return 0;
         }
+    }
+
+    public void presentWithdrawn(double output) {
+        System.out.println("$" + output + " withdrawn.");
+    }
+
+    public void presentError() {
+        System.out.println("Operation cancelled: An error occurred. Please try again.")
+    }
+
+    public void logout() {
+        System.out.println("Logged out.");
     }
 
 }

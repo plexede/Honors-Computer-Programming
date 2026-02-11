@@ -32,6 +32,10 @@ public class BankAccount {
     public boolean verify() {
         return verified;
     }
+    public void logout() {
+        verified = false;
+        attempts = 0;
+    }
 
     public void setHold() {
         hold = true;
